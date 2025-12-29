@@ -1,7 +1,10 @@
 <div class="card flex flex-col items-center">
   <p-panelmenu [model]="items" class="w-full">
     <ng-template #item let-item>
-      <a class="flex items-center px-4 py-1 cursor-pointer group">
+      <a
+        class="flex items-center px-4 py-1 cursor-pointer group"
+        [routerLink]="item.link"
+      >
         <i [class]="item.icon + ' text-primary group-hover:text-inherit'"></i>
         <span class="ms-2">{{ item.label }}</span>
       </a>
