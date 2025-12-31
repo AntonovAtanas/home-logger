@@ -5,3 +5,8 @@
   [emptyStateButtonText]="'Add now'"
   (emptyStateButtonClick)="onEmptyStateButtonClick()"
 ></app-empty-state>
+
+<app-add-property-dialog
+  [visible]="visible"
+  (closeFormDialog)="onAddPropertyDialogClose()"
+></app-add-property-dialog>
