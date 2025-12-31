@@ -1,1 +1,7 @@
-<p>dashboard</p>
+<!-- if no properties exist -->
+<app-empty-state
+  [emptyStateHeading]="'No added property yet'"
+  [emptyStateMessage]="'Get started by adding your property'"
+  [emptyStateButtonText]="'Add now'"
+  (emptyStateButtonClick)="onEmptyStateButtonClick()"
+></app-empty-state>
