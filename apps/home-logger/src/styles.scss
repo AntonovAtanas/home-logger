@@ -10,3 +10,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+ol li {
+  font-size: 12px;
+  color: #737b8c;
+}
+
+ol li.active {
+  font-weight: bold;
+  color: var(--p-primary-color);
+}

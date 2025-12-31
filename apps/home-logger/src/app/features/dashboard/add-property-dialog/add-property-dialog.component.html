@@ -1,19 +1,35 @@
 <p-dialog
-  header="Edit Profile"
+  header="Property Information"
   [modal]="true"
   [visible]="visible()"
-  [style]="{ width: '25rem' }"
+  [style]="{}"
   (visibleChange)="onDialogClose()"
+  class="flex gap-2"
 >
-  <span class="p-text-secondary block mb-8">Update your information.</span>
-  <div class="flex items-center gap-4 mb-4">
-    <label for="username" class="font-semibold w-24">Username</label>
-    <input pInputText id="username" class="flex-auto" autocomplete="off" />
+  <div>
+    <p-progressbar [value]="25" />
+
+    <ol class="flex gap-8">
+      <li class="active">1. Property Information</li>
+      <li>2. Construction Details</li>
+      <li>3. Timeline</li>
+      <li>4. Financials</li>
+    </ol>
   </div>
-  <div class="flex items-center gap-4 mb-8">
-    <label for="email" class="font-semibold w-24">Email</label>
-    <input pInputText id="email" class="flex-auto" autocomplete="off" />
-  </div>
+
+  <!-- TODO: step1 component -->
+
+  <p-floatlabel variant="on">
+    <input pInputText id="on_label" autocomplete="off" />
+    <label for="on_label">On Label</label>
+  </p-floatlabel>
+
+  <!-- TODO: step2 component -->
+
+  <!-- TODO: step3 component -->
+
+  <!-- TODO: step4 component -->
+
   <div class="flex justify-end gap-2">
     <p-button label="Cancel" severity="secondary" (click)="onDialogClose()" />
     <p-button label="Save" (click)="onDialogClose()" />
