@@ -9,5 +9,6 @@ import { EmptyStateComponent } from '../../shared/components/empty-state/empty-s
 export class DashboardComponent {
   onEmptyStateButtonClick() {
     // todo: trigger dialog form to add property
+    console.log('dada');
   }
 }
