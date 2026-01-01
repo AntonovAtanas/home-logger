@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressBar } from 'primeng/progressbar';
 import { AddConstructionDetailsComponent } from './construction-details/add-construction-details.component';
+import { AddPropertyInformationComponent } from './property-information/add-property-information.component';
 
 type FormPage = 1 | 2 | 3 | 4;
 
@@ -23,6 +24,7 @@ type FormPage = 1 | 2 | 3 | 4;
     InputTextModule,
     ProgressBar,
     AddConstructionDetailsComponent,
+    AddPropertyInformationComponent,
   ],
 })
 export class AddPropertyDialogComponent {
