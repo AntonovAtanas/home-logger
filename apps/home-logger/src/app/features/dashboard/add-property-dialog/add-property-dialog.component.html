@@ -27,12 +27,24 @@
 
     <!-- TODO: step4 component -->
 
-    <div class="flex justify-end gap-2 border-t pt-8">
+    <div class="flex justify-between gap-2 border-t pt-8">
       <p-button label="Cancel" severity="secondary" (click)="onDialogClose()" />
-      <p-button
-        [label]="formPage() !== 4 ? 'Next' : 'Save'"
-        (click)="onDialogClose()"
-      />
+
+      <div class="flex gap-4">
+        @if (formPage() > 1) {
+          <p-button
+            [label]="'Back'"
+            severity="secondary"
+            (click)="onBackPageClick()"
+          />
+        }
+
+        @if (formPage() !== 1) {
+          <p-button [label]="'Save'" (click)="onDialogClose()" />
+        } @else {
+          <p-button [label]="'Next'" (click)="onNextPageClick()" />
+        }
+      </div>
     </div>
   </div>
 </p-dialog>

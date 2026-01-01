@@ -1,4 +1,11 @@
-import { Component, computed, input, output, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  effect,
+  input,
+  output,
+  signal,
+} from '@angular/core';
 import { Dialog } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -25,7 +32,29 @@ export class AddPropertyDialogComponent {
   visible = input<boolean>(false);
   closeFormDialog = output();
 
+  constructor() {
+    effect(() => {
+      if (this.visible()) {
+        this.resetForm();
+      }
+    });
+  }
+
+  // manually reset the dialog states when closing; primeng dialog is not destroyed upon closing
+  resetForm() {
+    this.formPage.set(1);
+    // Add more form resets here as needed
+  }
+
   onDialogClose() {
     this.closeFormDialog.emit();
+  }
+
+  onNextPageClick() {
+    this.formPage.set((this.formPage() + 1) as FormPage);
+  }
+
+  onBackPageClick() {
+    this.formPage.set((this.formPage() - 1) as FormPage);
   }
 }
