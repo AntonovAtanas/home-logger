@@ -1,0 +1,65 @@
+<div class="flex flex-col gap-4">
+  <!-- property name -->
+  <div class="flex flex-col gap-2">
+    <label for="add-property-name">Property Name</label>
+
+    <input
+      pInputText
+      id="add-property-name"
+      autocomplete="off"
+      class="w-full"
+    />
+  </div>
+
+  <!-- property type -->
+  <div class="flex flex-col gap-2">
+    <label for="add-property-type">Property Type</label>
+
+    <p-select
+      [options]="propertyTypes"
+      id="add-property-type"
+      optionLabel="name"
+      class="w-full"
+    />
+  </div>
+
+  <!-- property city -->
+  <div class="flex flex-col gap-2">
+    <label for="add-property-city"> City</label>
+
+    <input
+      pInputText
+      id="add-property-city"
+      autocomplete="off"
+      class="w-full"
+    />
+  </div>
+
+  <!-- property address -->
+  <div class="flex flex-col gap-2">
+    <label for="add-property-address"> Address</label>
+
+    <input
+      pInputText
+      id="add-property-address"
+      autocomplete="off"
+      class="w-full"
+    />
+  </div>
+
+  <div class="flex gap-4">
+    <!-- total area -->
+    <div class="flex flex-col gap-2 w-full">
+      <label for="add-property-total-area"> Total Area (m²)</label>
+
+      <p-inputnumber id="add-property-total-area" autocomplete="off" />
+    </div>
+
+    <!-- floor -->
+    <div class="flex flex-col gap-2 w-full">
+      <label for="add-property-floor"> Floor </label>
+
+      <p-inputnumber id="add-property-floor" autocomplete="off" />
+    </div>
+  </div>
+</div>
