@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { InputTextModule } from 'primeng/inputtext';
 import { Select } from 'primeng/select';
-import { propertyTypes } from '../../../../consts/consts/property-types';
+import { propertyTypes } from '../../../../consts/consts/property-consts';
 import { InputNumberModule } from 'primeng/inputnumber';
 
 @Component({
@@ -10,5 +10,5 @@ import { InputNumberModule } from 'primeng/inputnumber';
   imports: [InputTextModule, InputNumberModule, Select],
 })
 export class AddPropertyInformationComponent {
-  readonly propertyTypes = propertyTypes;
+  readonly PropertyTypes = propertyTypes;
 }

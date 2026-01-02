@@ -18,11 +18,13 @@
 
     <!-- step1 component -->
     @if (formPage() === 1) {
-      <app-add-construction-details></app-add-construction-details>
+      <app-add-property-information></app-add-property-information>
     }
 
     <!-- TODO: step2 component -->
-
+    @if (formPage() === 2) {
+      <app-add-construction-details></app-add-construction-details>
+    }
     <!-- TODO: step3 component -->
 
     <!-- TODO: step4 component -->

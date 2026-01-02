@@ -1,0 +1,59 @@
+<div class="flex flex-col gap-4">
+  <div class="flex gap-4">
+    <!-- construction start date -->
+    <div class="flex flex-col gap-2">
+      <label for="add-property-construction-start-date">
+        Construction Start Date</label
+      >
+      <p-datepicker
+        [iconDisplay]="'input'"
+        [showIcon]="true"
+        inputId="add-property-construction-start-date"
+        appendTo="body"
+      />
+    </div>
+
+    <!-- construction end date -->
+
+    <div class="flex flex-col gap-2">
+      <label for="add-property-construction-end-date">
+        Construction End Date</label
+      >
+      <p-datepicker
+        [iconDisplay]="'input'"
+        [showIcon]="true"
+        inputId="add-property-construction-end-date"
+        baseZIndex="1000"
+        appendTo="body"
+      />
+    </div>
+  </div>
+
+  <!-- current construction phase -->
+  <div class="flex flex-col gap-2">
+    <label for="add-property-current-construction-phase"
+      >Current Construction Phase</label
+    >
+
+    <p-select
+      [options]="PropertyConstructionPhases"
+      id="add-property-current-construction-phase"
+      optionLabel="name"
+      class="w-full"
+    />
+  </div>
+
+  <!-- current construction status -->
+  <div class="flex flex-col gap-2">
+    <label for="add-property-current-construction-status"
+      >Current Construction Status</label
+    >
+    <p-select
+      [options]="PropertyConstructionStatuses"
+      id="add-property-current-construction-status"
+      optionLabel="name"
+      class="w-full"
+      appendTo="body"
+    />
+  </div>
+</div>
