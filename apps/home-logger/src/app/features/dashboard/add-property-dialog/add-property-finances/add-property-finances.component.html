@@ -26,7 +26,7 @@
 
   <!-- Payment structure -->
   <div
-    class="flex flex-col gap-2 p-3"
+    class="flex flex-col gap-4 p-4"
     [style]="{
       border: '1px solid var(--p-inputtext-border-color)',
       borderRadius: 'var(--p-inputtext-border-radius)',
@@ -34,5 +34,51 @@
   >
     <label>Payment per Stage (EUR)</label>
     <span class="sub-title">Specify the total price due at each stage</span>
+
+    <div class="flex gap-2 flex-col">
+      <div class="flex gap-4">
+        <div class="flex flex-col gap-2 w-full">
+          <label for="add-property-contract-payment ">Sign Contract</label>
+          <p-inputnumber
+            id="add-property-contract-payment"
+            mode="currency"
+            currency="EUR"
+            class="w-full"
+          />
+        </div>
+
+        <div class="flex flex-col gap-2 w-full">
+          <label for="add-property-act14-payment">Act 14</label>
+          <p-inputnumber
+            id="add-property-act14-payment"
+            mode="currency"
+            currency="EUR"
+            class="w-full"
+          />
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <div class="flex flex-col gap-2 w-full">
+          <label for="add-property-act15-payment">Act 15</label>
+          <p-inputnumber
+            id="add-property-act15-payment"
+            mode="currency"
+            currency="EUR"
+            class="w-full"
+          />
+        </div>
+
+        <div class="flex flex-col gap-2 w-full">
+          <label for="add-property-act16-payment">Act 16</label>
+          <p-inputnumber
+            id="add-property-act16-payment"
+            mode="currency"
+            currency="EUR"
+            class="w-full"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
