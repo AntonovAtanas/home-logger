@@ -25,7 +25,9 @@
     <!-- show current form page -->
     @switch (formPage()) {
       @case (1) {
-        <app-add-property-information></app-add-property-information>
+        <app-add-property-information
+          [propertyForm]="addPropertyForm"
+        ></app-add-property-information>
       }
       @case (2) {
         <app-add-construction-details></app-add-construction-details>

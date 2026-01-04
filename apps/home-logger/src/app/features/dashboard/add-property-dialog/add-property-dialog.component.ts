@@ -13,6 +13,9 @@ import { ProgressBar } from 'primeng/progressbar';
 import { AddConstructionDetailsComponent } from './add-construction-details/add-construction-details.component';
 import { AddPropertyInformationComponent } from './add-property-information/add-property-information.component';
 import { AddPropertyFinancesComponent } from './add-property-finances/add-property-finances.component';
+import { Property } from '../../../consts/consts/property';
+import { propertyInitialFormData } from './property-form-data/property-form-data';
+import { form } from '@angular/forms/signals';
 
 type FormPage = 1 | 2 | 3;
 
@@ -30,6 +33,9 @@ type FormPage = 1 | 2 | 3;
   ],
 })
 export class AddPropertyDialogComponent {
+  addPropertyModel = signal<Property>(propertyInitialFormData);
+  addPropertyForm = form(this.addPropertyModel);
+
   formPage = signal<FormPage>(1);
   formProgressPercentage = computed(() => this.formPage() * 33.33);
 
