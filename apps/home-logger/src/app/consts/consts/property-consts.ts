@@ -27,7 +27,10 @@ export const propertyConstructionPhases = [
     name: 'Act 14 - Construction Completion',
     value: PropertyConstructionPhases.ACT15,
   },
-  { name: 'Act - Permission for Use', value: PropertyConstructionPhases.ACT16 },
+  {
+    name: 'Act 16 - Permission for Use',
+    value: PropertyConstructionPhases.ACT16,
+  },
 ];
 
 export enum PropertyConstructionStatuses {

@@ -6,28 +6,24 @@
 >
   <div class="flex flex-col gap-8">
     <div class="flex flex-col gap-2">
-      <p-progressbar [value]="formProgressPercentage()" />
+      <p-progressbar [value]="formProgressPercentage()" showValue="false" />
 
       <ol class="flex gap-8">
         <li class="active">1. Property Information</li>
         <li>2. Construction Details</li>
-        <li>3. Timeline</li>
-        <li>4. Financials</li>
+        <li>3. Financials</li>
       </ol>
     </div>
 
-    <!-- step1 component -->
-    @if (formPage() === 1) {
-      <app-add-property-information></app-add-property-information>
+    <!-- show current form page -->
+    @switch (formPage()) {
+      @case (1) {
+        <app-add-property-information></app-add-property-information>
+      }
+      @case (2) {
+        <app-add-construction-details></app-add-construction-details>
+      }
     }
-
-    <!-- TODO: step2 component -->
-    @if (formPage() === 2) {
-      <app-add-construction-details></app-add-construction-details>
-    }
-    <!-- TODO: step3 component -->
-
-    <!-- TODO: step4 component -->
 
     <div class="flex justify-between gap-2 border-t pt-8">
       <p-button label="Cancel" severity="secondary" (click)="onDialogClose()" />
@@ -41,7 +37,7 @@
           />
         }
 
-        @if (formPage() !== 1) {
+        @if (formPage() === 3) {
           <p-button [label]="'Save'" (click)="onDialogClose()" />
         } @else {
           <p-button [label]="'Next'" (click)="onNextPageClick()" />

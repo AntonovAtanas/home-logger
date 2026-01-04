@@ -13,7 +13,7 @@ import { ProgressBar } from 'primeng/progressbar';
 import { AddConstructionDetailsComponent } from './construction-details/add-construction-details.component';
 import { AddPropertyInformationComponent } from './property-information/add-property-information.component';
 
-type FormPage = 1 | 2 | 3 | 4;
+type FormPage = 1 | 2 | 3;
 
 @Component({
   selector: 'app-add-property-dialog',
@@ -29,7 +29,7 @@ type FormPage = 1 | 2 | 3 | 4;
 })
 export class AddPropertyDialogComponent {
   formPage = signal<FormPage>(1);
-  formProgressPercentage = computed(() => this.formPage() * 25);
+  formProgressPercentage = computed(() => this.formPage() * 33.33);
 
   visible = input<boolean>(false);
   closeFormDialog = output();

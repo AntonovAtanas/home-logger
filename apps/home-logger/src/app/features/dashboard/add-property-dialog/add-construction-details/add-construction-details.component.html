@@ -10,6 +10,10 @@
         [showIcon]="true"
         inputId="add-property-construction-start-date"
         appendTo="body"
+        view="month"
+        dateFormat="mm/yy"
+        [readonlyInput]="true"
+        [panelStyle]="{ width: '234px' }"
       />
     </div>
 
@@ -23,8 +27,11 @@
         [iconDisplay]="'input'"
         [showIcon]="true"
         inputId="add-property-construction-end-date"
-        baseZIndex="1000"
         appendTo="body"
+        view="month"
+        dateFormat="mm/yy"
+        [readonlyInput]="true"
+        [panelStyle]="{ width: '234px' }"
       />
     </div>
   </div>
