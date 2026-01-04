@@ -3,15 +3,22 @@
   [modal]="true"
   [visible]="visible()"
   (visibleChange)="onDialogClose()"
+  [style]="{ width: '550px' }"
 >
   <div class="flex flex-col gap-8">
     <div class="flex flex-col gap-2">
       <p-progressbar [value]="formProgressPercentage()" showValue="false" />
 
-      <ol class="flex gap-8">
-        <li class="active">1. Property Information</li>
-        <li>2. Construction Details</li>
-        <li>3. Financials</li>
+      <ol class="flex justify-between gap-8">
+        <li [class.active]="formPage() === 1" class="sub-title">
+          1. Property Information
+        </li>
+        <li [class.active]="formPage() === 2" class="sub-title">
+          2. Construction Details
+        </li>
+        <li [class.active]="formPage() === 3" class="sub-title">
+          3. Financials
+        </li>
       </ol>
     </div>
 
@@ -22,6 +29,9 @@
       }
       @case (2) {
         <app-add-construction-details></app-add-construction-details>
+      }
+      @case (3) {
+        <app-add-property-finances></app-add-property-finances>
       }
     }
 

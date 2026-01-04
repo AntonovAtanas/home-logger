@@ -44,3 +44,13 @@ export const propertyConstructionStatuses = [
   { name: 'Delayed', value: PropertyConstructionStatuses.DELAYED },
   { name: 'Completed', value: PropertyConstructionStatuses.COMPLETED },
 ];
+
+export enum PropertyPaymentStructure {
+  STAGE_BASED = 'STAGE_BASED',
+  FULLY_PAID = 'FULLY_PAID',
+}
+
+export const propertyPaymentStructures = [
+  { name: 'Stage Based', value: PropertyPaymentStructure.STAGE_BASED },
+  { name: 'Already Paid', value: PropertyPaymentStructure.FULLY_PAID },
+];

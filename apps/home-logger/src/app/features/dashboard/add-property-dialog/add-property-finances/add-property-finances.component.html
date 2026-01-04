@@ -1,0 +1,38 @@
+<div class="flex flex-col gap-4">
+  <!-- Property purchase price -->
+  <div class="flex flex-col gap-2">
+    <label for="add-property-purchase-price">Purchase Price (EUR)</label>
+
+    <p-inputnumber
+      id="add-property-purchase-price"
+      mode="currency"
+      currency="EUR"
+      locale="de-DE"
+      class="w-full"
+    />
+  </div>
+
+  <!-- Payment structure -->
+  <div class="flex flex-col gap-2">
+    <label for="add-property-down-payment">Payment Structure</label>
+    <p-select
+      [options]="PropertyPaymentStructures"
+      id="add-property-payment-structure"
+      optionLabel="name"
+      class="w-full"
+      appendTo="body"
+    />
+  </div>
+
+  <!-- Payment structure -->
+  <div
+    class="flex flex-col gap-2 p-3"
+    [style]="{
+      border: '1px solid var(--p-inputtext-border-color)',
+      borderRadius: 'var(--p-inputtext-border-radius)',
+    }"
+  >
+    <label>Payment per Stage (EUR)</label>
+    <span class="sub-title">Specify the total price due at each stage</span>
+  </div>
+</div>

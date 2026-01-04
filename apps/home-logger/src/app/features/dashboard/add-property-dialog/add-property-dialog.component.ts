@@ -10,8 +10,9 @@ import { Dialog } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressBar } from 'primeng/progressbar';
-import { AddConstructionDetailsComponent } from './construction-details/add-construction-details.component';
-import { AddPropertyInformationComponent } from './property-information/add-property-information.component';
+import { AddConstructionDetailsComponent } from './add-construction-details/add-construction-details.component';
+import { AddPropertyInformationComponent } from './add-property-information/add-property-information.component';
+import { AddPropertyFinancesComponent } from './add-property-finances/add-property-finances.component';
 
 type FormPage = 1 | 2 | 3;
 
@@ -25,6 +26,7 @@ type FormPage = 1 | 2 | 3;
     ProgressBar,
     AddConstructionDetailsComponent,
     AddPropertyInformationComponent,
+    AddPropertyFinancesComponent,
   ],
 })
 export class AddPropertyDialogComponent {
