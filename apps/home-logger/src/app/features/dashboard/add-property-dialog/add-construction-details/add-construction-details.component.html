@@ -14,6 +14,7 @@
         dateFormat="mm/yy"
         [readonlyInput]="true"
         [panelStyle]="{ width: '234px' }"
+        [field]="propertyForm.constructionStartDate"
       />
     </div>
 
@@ -31,6 +32,7 @@
         dateFormat="mm/yy"
         [readonlyInput]="true"
         [panelStyle]="{ width: '234px' }"
+        [field]="propertyForm.constructionEndDate"
       />
     </div>
   </div>
@@ -46,6 +48,8 @@
       id="add-property-current-construction-phase"
       optionLabel="name"
       class="w-full"
+      optionValue="value"
+      [field]="propertyForm.currentConstructionPhase"
     />
   </div>
 
@@ -60,6 +64,8 @@
       optionLabel="name"
       class="w-full"
       appendTo="body"
+      optionValue="value"
+      [field]="propertyForm.currentConstructionStatus"
     />
   </div>
 </div>

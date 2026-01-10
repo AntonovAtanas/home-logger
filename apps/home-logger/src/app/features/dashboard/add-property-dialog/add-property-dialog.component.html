@@ -30,10 +30,14 @@
         ></app-add-property-information>
       }
       @case (2) {
-        <app-add-construction-details></app-add-construction-details>
+        <app-add-construction-details
+          [propertyForm]="addPropertyForm"
+        ></app-add-construction-details>
       }
       @case (3) {
-        <app-add-property-finances></app-add-property-finances>
+        <app-add-property-finances
+          [propertyForm]="addPropertyForm"
+        ></app-add-property-finances>
       }
     }
 
